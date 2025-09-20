@@ -1,0 +1,31 @@
+{
+  "name": "text-flow-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "An animated text component for React.",
+  "scripts": {
+    "install:all": "pnpm -r install",
+    "watch": "pnpm --filter=text-flow dev",
+    "dev": "pnpm run watch --onSuccess \"pnpm -w run site:dev\"",
+    "build": "pnpm --filter=text-flow build",
+    "dev:site": "pnpm --filter=site dev",
+    "build:site": "pnpm --filter=site build",
+    "lint": "pnpm --filter=text-flow lint",
+    "lint:fix": "pnpm --filter=text-flow lint:fix",
+    "pre-commit": "pnpm run --filter=text-flow pre-commit",
+    "version": "changeset version",
+    "release": "changeset publish"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Lochie Axon",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@commitlint/cli": "^17.8.0",
+    "@commitlint/config-conventional": "^17.8.0",
+    "concurrently": "^8.2.1",
+    "lint-staged": "^15.0.2"
+  }
+}
