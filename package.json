@@ -1,8 +1,6 @@
 {
-  "name": "text-flow-monorepo",
   "private": true,
-  "version": "1.0.0",
-  "description": "An animated text component for React.",
+  "type": "module",
   "scripts": {
     "install:all": "pnpm -r install",
     "watch": "pnpm --filter=text-flow dev",
@@ -16,11 +14,6 @@
     "version": "changeset version",
     "release": "changeset publish"
   },
-  "keywords": [
-    "react"
-  ],
-  "author": "Lochie Axon",
-  "license": "MIT",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
     "@commitlint/cli": "^17.8.0",

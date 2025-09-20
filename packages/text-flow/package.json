@@ -2,6 +2,13 @@
   "name": "text-flow",
   "version": "0.0.1",
   "description": "An animated text component for React.",
+  "author": "Lochie Axon",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lochie/text-flow.git",
+    "directory": "packages/text-flow"
+  },
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
@@ -29,16 +36,9 @@
     "text",
     "animation"
   ],
-  "author": "Lochie Axon",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lochie/text-flow.git",
-    "directory": "packages/text-flow"
-  },
   "bugs": {
     "url": "https://github.com/lochie/text-flow/issues"
   },
-  "license": "MIT",
   "files": [
     "dist/*"
   ],
