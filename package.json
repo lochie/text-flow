@@ -9,7 +9,7 @@
     "dev": "pnpm run watch --onSuccess \"pnpm -w run site:dev\"",
     "build": "pnpm --filter=text-flow build",
     "site:dev": "pnpm --filter=site dev",
-    "site:build": "build && pnpm --filter=site build",
+    "site:build": "pnpm run build && pnpm --filter=site build",
     "lint": "pnpm --filter=text-flow lint",
     "lint:fix": "pnpm --filter=text-flow lint:fix",
     "pre-commit": "pnpm run --filter=text-flow pre-commit",
