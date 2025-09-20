@@ -11,14 +11,13 @@
     "lint": "pnpm --filter=text-flow lint",
     "lint:fix": "pnpm --filter=text-flow lint:fix",
     "pre-commit": "pnpm run --filter=text-flow pre-commit",
-    "version": "changeset version",
-    "release": "changeset publish"
+    "version": "changeset version && git add --all",
+    "release": "pnpm build && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
     "@commitlint/cli": "^17.8.0",
     "@commitlint/config-conventional": "^17.8.0",
-    "concurrently": "^8.2.1",
     "lint-staged": "^15.0.2"
   }
 }

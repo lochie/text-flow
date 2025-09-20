@@ -31,4 +31,7 @@ Follow me on [Twitter](https://twitter.com/lochieaxon).
 
 ### Other projects
 
-You might also like [easing.dev](https://easing.dev) for creating custom easing graphs.
+You might also like:
+
+- [number-flow](https://number-flow.barvian.me/) - Animated number component by [Maxwell Barvian](https://x.com/mbarvian).
+- [easing.dev](https://easing.dev) - Easily create custom easing graphs.
