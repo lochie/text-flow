@@ -6,16 +6,10 @@
 pnpm install:all
 ```
 
-## Dev/Watch Library
+## Dev/Watch Library and Example
 
 ```sh
 pnpm dev
-```
-
-## Run React,Remix and NextJs Demos
-
-```sh
-pnpm start:demos
 ```
 
 ## Build Library
