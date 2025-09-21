@@ -84,7 +84,3 @@ export default function Home() {
     </div>
   );
 }
-
-const Example = ({ code }: { code: string }) => {
-  return <CodeBlock raw={code}>{code}</CodeBlock>;
-};
