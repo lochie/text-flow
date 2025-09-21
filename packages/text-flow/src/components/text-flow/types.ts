@@ -1,7 +1,8 @@
 import { Transition } from "motion";
 
 export type TextFlowProps = {
-  children: string;
+  debug?: boolean;
+  children: string; // TODO: support ReactNode
   duration?: Transition["duration"];
   ease?: Transition["ease"];
   respectMotionPreference?: boolean;

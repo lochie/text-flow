@@ -9,6 +9,7 @@ import useDebounce from "../../hooks/useDebounce";
 import { findLCS } from "../../utils";
 
 const TextFlow = ({
+  debug,
   children,
   duration = defaultConfig.duration,
   ease = defaultConfig.ease,
@@ -107,7 +108,7 @@ const TextFlow = ({
 
   return (
     <motion.span
-      style={styles.containerRef}
+      style={{ ...styles.container, ...(debug ? styles.debug : {}) }}
       initial={{
         width,
       }}

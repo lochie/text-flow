@@ -7,6 +7,9 @@ const styles: { [key: string]: React.CSSProperties } = {
     display: "inline-flex",
     whiteSpace: "pre",
   },
+  debug: {
+    outline: "1px solid red",
+  },
 };
 
 export default styles;
