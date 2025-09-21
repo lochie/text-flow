@@ -2,10 +2,10 @@ import styles from "./styles.module.scss";
 
 import { useEffect, useState } from "react";
 
+import TextFlow from "text-flow";
+
 import { Footer } from "../footer";
 import { Button } from "../button";
-import { CodeBlock } from "../codeblock";
-import TextFlow from "text-flow";
 
 const ReactLogo = () => (
   <svg
