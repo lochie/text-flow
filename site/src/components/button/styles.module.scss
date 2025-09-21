@@ -1,0 +1,23 @@
+.button {
+  padding: 1rem 2rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4rem;
+  font-size: 1rem;
+  transition: all 100ms ease;
+
+  svg {
+    display: block;
+  }
+  &:active {
+    transform: scale(0.96);
+  }
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

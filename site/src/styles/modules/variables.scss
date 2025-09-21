@@ -1,0 +1,28 @@
+:root {
+  --body: #000000;
+  --color: #a8a8a8;
+  --border: #1c1c1c;
+  --primary: #ffce44;
+}
+
+:root {
+  --hr-color: rgba(255, 255, 255, 0.1);
+  --focus-color: rgba(0, 122, 255, 0.5);
+
+  --selection-color: #fff;
+  --selection-bg: rgba(255, 255, 255, 0.15);
+
+  --font-fallback:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --font-primary: var(--font-inter, var(--font-fallback));
+  --font-secondary:
+    "SF Pro Rounded", ui-rounded, "Nunito", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif,
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-code:
+    "SF Mono", "SFMono-Regular", "Consolas", "Liberation Mono", Menlo, Courier,
+    monospace;
+}

@@ -1,0 +1,41 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  letter-spacing: -0.00563rem;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+
+  .credits {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      padding: 0.25rem;
+      padding-right: 0.425rem;
+      border-radius: 3rem;
+      background-color: rgba(255, 255, 255, 0);
+      transition: background-color 200ms ease;
+
+      img {
+        display: block;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.testbench {
+  width: 100%;
+  border-radius: 2rem;
+  padding: 3rem;
+  box-shadow: inset 0 0 0 1px var(--hr-color);
+}
+
+.demo {
+  width: 100%;
+  font-family: var(--font-primary);
+}
