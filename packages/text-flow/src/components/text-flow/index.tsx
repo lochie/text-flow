@@ -11,6 +11,8 @@ import { findLCS } from "../../utils";
 const TextFlow = ({
   debug,
   children,
+  //fontSize,
+  //fontWeight,
   duration = defaultConfig.duration,
   ease = defaultConfig.ease,
   // respectMotionPreference = defaultConfig.respectMotionPreference,
@@ -106,15 +108,18 @@ const TextFlow = ({
     </motion.span>
   );
 
+  const animationProps = {
+    width,
+    //fontSize: fontSize ? `${fontSize}px` : undefined,
+    //fontWeight: fontWeight ? fontWeight : undefined,
+    //fontVariationSettings: fontWeight ? `"wght" ${fontWeight}` : undefined,
+  };
+
   return (
     <motion.span
       style={{ ...styles.container, ...(debug ? styles.debug : {}) }}
-      initial={{
-        width,
-      }}
-      animate={{
-        width,
-      }}
+      initial={animationProps}
+      animate={animationProps}
       transition={transition}
     >
       <span ref={containerRef} style={styles.span}>
