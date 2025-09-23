@@ -1,10 +1,16 @@
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   padding: 1rem 2rem;
   color: #ffffff;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 4rem;
   font-size: 1rem;
-  transition: all 100ms ease;
+  transition: 100ms ease;
+  transition-property: background, transform;
+  will-change: transform;
 
   svg {
     display: block;
