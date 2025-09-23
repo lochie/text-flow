@@ -39,7 +39,7 @@ const pkgCmds = ["npm i text-flow", "pnpm i text-flow", "yarn add text-flow"];
 
 export default function Home() {
   const [textIndex, setTextIndex] = useState(0);
-  const [cmdIndex, setCmdIndex] = useState(0);
+  const [cmdIndex] = useState(0);
 
   useEffect(() => {
     const interval = setTimeout(() => {
