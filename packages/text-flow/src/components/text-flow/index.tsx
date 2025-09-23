@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import { motion, AnimatePresence, Transition } from "motion/react";
@@ -5,8 +7,9 @@ import styles from "./styles";
 
 import { TextFlowProps } from "./types";
 import defaultConfig from "../../config";
-import useDebounce from "../../hooks/useDebounce";
 import { findLCS } from "../../utils";
+
+import useDebounce from "../../hooks/useDebounce";
 
 const TextFlow = ({
   debug,
@@ -60,9 +63,9 @@ const TextFlow = ({
   const renderChars = (key: string, text: string) => (
     <motion.span
       style={styles.span}
-      key={key}
+      key={text}
       layout="position"
-      layoutId={key}
+      layoutId={text}
       initial={{
         opacity: 0,
         scale: 0.95,
@@ -138,7 +141,7 @@ const TextFlow = ({
                   layout="position"
                   layoutId={`${id}-lcs`}
                   transition={transition}
-                  style={styles.span}
+                  style={{ ...styles.span }}
                 >
                   {renderChars(`${id}-lcs-chars`, lcs)}
                 </motion.span>
