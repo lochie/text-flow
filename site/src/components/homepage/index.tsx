@@ -35,6 +35,8 @@ const texts = [
   "Animate Text Effortlessly",
   "Animate Text Seamlessly",
   "Fluidly Animate Text",
+  //"Fluidly Animate Text across multiple lines",
+  //"Multiple lines of animated text!",
 ];
 const pkgCmds = ["npm i text-flow", "pnpm i text-flow", "yarn add text-flow"];
 

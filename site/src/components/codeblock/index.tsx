@@ -3,7 +3,13 @@ import { useState } from "react";
 import styles from "./styles.module.scss";
 import TextFlow from "text-flow";
 
-export const CodeBlock = ({ code }: { code: string }) => {
+export const CodeBlock = ({
+  code,
+  children,
+}: {
+  code: string;
+  children?: React.ReactNode;
+}) => {
   const [isCopied, setIsCopied] = useState(false);
 
   return (
@@ -22,7 +28,7 @@ export const CodeBlock = ({ code }: { code: string }) => {
       >
         <TextFlow>{isCopied ? `Copied` : `Copy`}</TextFlow>
       </button>
-      <pre>{code}</pre>
+      <pre>{children ?? code}</pre>
     </div>
   );
 };
