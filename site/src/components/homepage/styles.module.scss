@@ -1,12 +1,20 @@
 .page {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  padding: 8rem 0;
-  gap: 64px;
+  justify-content: center;
   width: 100%;
-  max-width: 52rem;
+  max-width: 42rem;
+  min-height: 100svh;
+  padding: 4rem 1rem;
   margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
 }
 
 .header {
@@ -51,15 +59,9 @@
 }
 
 .install {
-  width: 22rem;
+  max-width: 22rem;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  button {
-    font-size: 1.25rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    color: white;
-  }
 }

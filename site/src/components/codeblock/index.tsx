@@ -2,22 +2,15 @@ import { CopyButton } from "../copy-button";
 
 import styles from "./styles.module.scss";
 
-export const CodeBlock = ({
-  children,
-  raw,
-}: {
-  children: React.ReactNode;
-  raw: string;
-}) => {
+export const CodeBlock = ({ code }: { code: string }) => {
   return (
     <div className={styles.container}>
-      {raw && (
-        <div className={styles.copyButton}>
-          <CopyButton text={raw} />
-        </div>
-      )}
+      <div className={styles.copyButton}>
+        <CopyButton text={code} />
+      </div>
+
       <code>
-        <pre>{children}</pre>
+        <pre>{code}</pre>
       </code>
     </div>
   );
