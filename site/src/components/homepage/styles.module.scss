@@ -55,13 +55,16 @@
   text-align: center;
   color: #ffffff;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--body-light);
 }
 
 .install {
-  max-width: 22rem;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.example {
+  max-width: 28rem;
+  width: 100%;
 }

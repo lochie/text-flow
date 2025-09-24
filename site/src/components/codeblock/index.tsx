@@ -1,17 +1,28 @@
-import { CopyButton } from "../copy-button";
+import { useState } from "react";
 
 import styles from "./styles.module.scss";
+import TextFlow from "text-flow";
 
 export const CodeBlock = ({ code }: { code: string }) => {
+  const [isCopied, setIsCopied] = useState(false);
+
   return (
     <div className={styles.container}>
-      <div className={styles.copyButton}>
-        <CopyButton text={code} />
-      </div>
-
-      <code>
-        <pre>{code}</pre>
-      </code>
+      <button
+        className={styles.copy}
+        onClick={() => {
+          if (code) {
+            setIsCopied(true);
+            navigator.clipboard.writeText(code.toString());
+            setTimeout(() => {
+              setIsCopied(false);
+            }, 2000);
+          }
+        }}
+      >
+        <TextFlow>{isCopied ? `Copied` : `Copy`}</TextFlow>
+      </button>
+      <pre>{code}</pre>
     </div>
   );
 };

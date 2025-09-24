@@ -90,11 +90,11 @@ export default function Home() {
           </p>
         </div>
 
-        <div className={styles.install}>
+        <div className={styles.example}>
           <CodeBlock
-            code="import TextFlow from 'text-flow'
+            code={`import TextFlow from 'text-flow'
         
-<TextFlow>Hello world</TextFlow>"
+<TextFlow>${texts[textIndex % texts.length]}</TextFlow>`}
           />
         </div>
         <Footer />
