@@ -97,7 +97,14 @@ export default function Home() {
             code={`import TextFlow from 'text-flow'
         
 <TextFlow>${texts[textIndex % texts.length]}</TextFlow>`}
-          />
+          >
+            {`import TextFlow from 'text-flow'
+
+<TextFlow>`}
+
+            <TextFlow>{texts[textIndex % texts.length]}</TextFlow>
+            {`</TextFlow>`}
+          </CodeBlock>
         </div>
         <Footer />
       </div>
