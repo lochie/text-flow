@@ -63,9 +63,9 @@ const TextFlow = ({
   const renderChars = (key: string, text: string) => (
     <motion.span
       style={styles.span}
-      key={text}
+      key={`${id}-${text}`}
       layout="position"
-      layoutId={text}
+      layoutId={`${id}-${text}`}
       initial={{
         opacity: 0,
         scale: 0.95,
@@ -84,7 +84,7 @@ const TextFlow = ({
       <AnimatePresence initial={false} mode="popLayout">
         <motion.span
           style={styles.span}
-          key={`${key}-${text}`}
+          key={`${id}-${key}-${text}`}
           initial={{
             opacity: 0,
             scale: 0.95,
