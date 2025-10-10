@@ -38,11 +38,15 @@ const texts = [
   //"Fluidly Animate Text across multiple lines",
   //"Multiple lines of animated text!",
 ];
-const pkgCmds = ["npm i text-flow", "pnpm i text-flow", "yarn add text-flow"];
+const pkgCmds = {
+  npm: "npm i text-flow",
+  pnpm: "pnpm i text-flow",
+  yarn: "yarn add text-flow",
+};
 
 export default function Home() {
   const [textIndex, setTextIndex] = useState(0);
-  const [cmdIndex] = useState(0);
+  const [cmdIndex, setCmdIndex] = useState(0);
 
   useEffect(() => {
     const interval = setTimeout(() => {
@@ -85,9 +89,26 @@ export default function Home() {
         </div>
 
         <div className={styles.install}>
+          <div className={styles.commands}>
+            {Object.keys(pkgCmds).map((cmd, i) => (
+              <button
+                key={cmd}
+                onClick={() => setCmdIndex(i)}
+                data-active={i === cmdIndex}
+              >
+                {cmd}
+              </button>
+            ))}
+          </div>
           <p>
             <code>
-              <TextFlow>{pkgCmds[cmdIndex % pkgCmds.length]}</TextFlow>
+              <TextFlow>
+                {
+                  pkgCmds[
+                    Object.keys(pkgCmds)[cmdIndex] as keyof typeof pkgCmds
+                  ]
+                }
+              </TextFlow>
             </code>
           </p>
         </div>
