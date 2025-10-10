@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 
 import React from "react";
-import TextFlow from "text-flow";
+import ContentTransition from "content-transition";
 import { Button } from "../button";
 import { Box } from "../box";
 
@@ -40,7 +40,7 @@ export const Testbench = () => {
           textAlign: latest.textAlignment,
         }}
       >
-        <TextFlow>{latest.text}</TextFlow>
+        <ContentTransition>{latest.text}</ContentTransition>
       </div>
 
       <form>
@@ -106,7 +106,9 @@ export const Testbench = () => {
             disabled={isChanged}
             onClick={() => setLatest(prev)}
           >
-            <TextFlow>{!isChanged ? "Revert" : "Reverted"}</TextFlow>
+            <ContentTransition>
+              {!isChanged ? "Revert" : "Reverted"}
+            </ContentTransition>
           </Button>
           <Button
             type="submit"
@@ -117,7 +119,9 @@ export const Testbench = () => {
               setLatest(options);
             }}
           >
-            <TextFlow>{isChanged ? "Apply" : "Applied"}</TextFlow>
+            <ContentTransition>
+              {isChanged ? "Apply" : "Applied"}
+            </ContentTransition>
           </Button>
         </Box>
       </form>

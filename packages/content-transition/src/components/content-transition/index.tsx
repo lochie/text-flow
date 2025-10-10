@@ -5,13 +5,13 @@ import React from "react";
 import { motion, AnimatePresence, Transition } from "motion/react";
 import styles from "./styles";
 
-import { TextFlowProps } from "./types";
+import { ContentTransitionProps } from "./types";
 import defaultConfig from "../../config";
 import { findLCS } from "../../utils";
 
 import useDebounce from "../../hooks/useDebounce";
 
-const TextFlow = ({
+const ContentTransition = ({
   debug,
   children,
   //fontSize,
@@ -20,7 +20,7 @@ const TextFlow = ({
   ease = defaultConfig.ease,
   // respectMotionPreference = defaultConfig.respectMotionPreference,
   onAnimationComplete,
-}: TextFlowProps) => {
+}: ContentTransitionProps) => {
   const id = React.useId();
   const previousRef = React.useRef(children);
   const debounceChildren = useDebounce(children, 100);
@@ -128,8 +128,8 @@ const TextFlow = ({
       <span ref={containerRef} style={styles.span}>
         <AnimatePresence initial={false} mode="popLayout">
           <motion.span
-            key={`${id}-text-flow`}
-            layoutId={`${id}-text-flow`}
+            key={`${id}-content-transition`}
+            layoutId={`${id}-content-transition`}
             layout="position"
             transition={transition}
             style={styles.span}
@@ -155,4 +155,4 @@ const TextFlow = ({
   );
 };
 
-export default TextFlow;
+export default ContentTransition;

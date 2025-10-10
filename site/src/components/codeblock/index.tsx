@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import styles from "./styles.module.scss";
-import TextFlow from "text-flow";
+import ContentTransition from "content-transition";
 
 export const CodeBlock = ({
   code,
@@ -26,7 +26,7 @@ export const CodeBlock = ({
           }
         }}
       >
-        <TextFlow>{isCopied ? `Copied` : `Copy`}</TextFlow>
+        <ContentTransition>{isCopied ? `Copied` : `Copy`}</ContentTransition>
       </button>
       <pre>{children ?? code}</pre>
     </div>

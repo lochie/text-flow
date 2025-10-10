@@ -1,4 +1,4 @@
-# text-flow
+# content-transition
 
 ## 0.0.1
 

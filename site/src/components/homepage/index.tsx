@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 
 import { useEffect, useState } from "react";
 
-import TextFlow from "text-flow";
+import ContentTransition from "content-transition";
 
 import { Footer } from "../footer";
 import { Button } from "../button";
@@ -39,9 +39,9 @@ const texts = [
   //"Multiple lines of animated text!",
 ];
 const pkgCmds = {
-  npm: "npm i text-flow",
-  pnpm: "pnpm i text-flow",
-  yarn: "yarn add text-flow",
+  npm: "npm i content-transition",
+  pnpm: "pnpm i content-transition",
+  yarn: "yarn add content-transition",
 };
 
 export default function Home() {
@@ -61,7 +61,7 @@ export default function Home() {
         <div className={styles.header}>
           <h1>
             <span>
-              <strong>Text Flow</strong> for
+              <strong>Content Transition</strong> for
             </span>{" "}
             <ReactLogo /> <strong>React</strong>
           </h1>
@@ -69,7 +69,9 @@ export default function Home() {
         </div>
 
         <div className={styles.demo}>
-          <TextFlow>{texts[textIndex % texts.length]}</TextFlow>
+          <ContentTransition>
+            {texts[textIndex % texts.length]}
+          </ContentTransition>
 
           <Button onClick={() => setTextIndex((i) => i + 1)}>
             <svg
@@ -102,29 +104,31 @@ export default function Home() {
           </div>
           <p>
             <code>
-              <TextFlow>
+              <ContentTransition>
                 {
                   pkgCmds[
                     Object.keys(pkgCmds)[cmdIndex] as keyof typeof pkgCmds
                   ]
                 }
-              </TextFlow>
+              </ContentTransition>
             </code>
           </p>
         </div>
 
         <div className={styles.example}>
           <CodeBlock
-            code={`import TextFlow from 'text-flow'
+            code={`import ContentTransition from 'content-transition'
         
-<TextFlow>${texts[textIndex % texts.length]}</TextFlow>`}
+<ContentTransition>${texts[textIndex % texts.length]}</ContentTransition>`}
           >
-            {`import TextFlow from 'text-flow'
+            {`import ContentTransition from 'content-transition'
 
-<TextFlow>`}
+<ContentTransition>`}
 
-            <TextFlow>{texts[textIndex % texts.length]}</TextFlow>
-            {`</TextFlow>`}
+            <ContentTransition>
+              {texts[textIndex % texts.length]}
+            </ContentTransition>
+            {`</ContentTransition>`}
           </CodeBlock>
         </div>
         <Footer />

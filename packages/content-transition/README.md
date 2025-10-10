@@ -1,25 +1,25 @@
-# text-flow
+# content-transition
 
 An animated text component for React.
 
 ## Installation
 
 ```shell
-pnpm i text-flow
+pnpm i content-transition
 ```
 
 ## Usage
 
 ```tsx
-import TextFlow from "text-flow";
+import ContentTransition from "content-transition";
 
-<TextFlow>Hello world</TextFlow>;
+<ContentTransition>Hello world</ContentTransition>;
 ```
 
 ## Options
 
 ```tsx
-<TextFlow
+<ContentTransition
   children="Hello world"
   duration={1} // duration of the transition in seconds
 />
