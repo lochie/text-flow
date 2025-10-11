@@ -16,13 +16,13 @@ export const Testbench = () => {
   const [options, setOptions] = React.useState<Options>({
     text: "Hello world",
     fontSize: 64,
-    fontWeight: 900,
+    fontWeight: 400,
     textAlignment: "center",
   });
   const [latest, setLatest] = React.useState<Options>({
     ...options,
     text: "Hello",
-    fontSize: 24,
+    fontSize: 64,
     fontWeight: 400,
     textAlignment: "center",
   });

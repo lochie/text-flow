@@ -1,6 +1,6 @@
 import { Transition } from "motion";
 
-export type ContentTransitionProps = {
+export interface ContentTransitionProps {
   debug?: boolean;
   children: string; // TODO: support ReactNode
   //fontSize?: number; // potentially supported in future
@@ -9,4 +9,4 @@ export type ContentTransitionProps = {
   ease?: Transition["ease"];
   respectMotionPreference?: boolean;
   onAnimationComplete?: () => void;
-};
+}

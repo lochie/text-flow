@@ -1,5 +1,6 @@
 const styles: { [key: string]: React.CSSProperties } = {
   container: {
+    position: "relative",
     display: "inline-flex",
   },
   span: {

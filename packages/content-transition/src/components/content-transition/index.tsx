@@ -60,20 +60,14 @@ const ContentTransition = ({
   const prefix = children.slice(0, prefixEnd);
   const suffix = children.slice(suffixStart);
 
-  const renderChars = (key: string, text: string) => (
+  const shiftDistance = "0.125em";
+
+  const renderChars = (key: string, text: string, originX: number) => (
     <motion.span
       style={styles.span}
       key={`${id}-${text}`}
       layout="position"
       layoutId={`${id}-${text}`}
-      initial={{
-        opacity: 0,
-        scale: 0.95,
-      }}
-      animate={{
-        opacity: 1,
-        scale: 1,
-      }}
       exit={{
         opacity: 0,
         scale: 0.95,
@@ -81,28 +75,24 @@ const ContentTransition = ({
       transition={transition}
       onAnimationComplete={onAnimationComplete}
     >
-      <AnimatePresence initial={false} mode="popLayout">
+      <AnimatePresence initial={originX !== 0.5} mode="popLayout">
         <motion.span
           style={styles.span}
           key={`${id}-${key}-${text}`}
           initial={{
+            x:
+              originX === 0 ? shiftDistance : originX === 1 ? shiftDistance : 0,
             opacity: 0,
             scale: 0.95,
           }}
           animate={{
+            x: 0,
             opacity: 1,
             scale: 1,
           }}
-          exit={{
-            opacity: 0,
-            scale: 0.95,
-            transition: {
-              ...transition,
-            },
-          }}
           transition={{
             ...transition,
-            delay: (transition?.duration ?? 0.4) * 0.25,
+            delay: (transition.duration ?? defaultConfig.duration) * 0.2,
           }}
         >
           {text}
@@ -135,7 +125,7 @@ const ContentTransition = ({
             style={styles.span}
           >
             <AnimatePresence initial={false} mode="popLayout">
-              {prefix && renderChars(`${id}-prefix`, prefix)}
+              {prefix && renderChars(`${id}-prefix`, prefix, 0)}
               {lcs && (
                 <motion.span
                   layout="position"
@@ -143,10 +133,10 @@ const ContentTransition = ({
                   transition={transition}
                   style={{ ...styles.span }}
                 >
-                  {renderChars(`${id}-lcs-chars`, lcs)}
+                  {renderChars(`${id}-lcs-chars`, lcs, 0.5)}
                 </motion.span>
               )}
-              {suffix && renderChars(`${id}-suffix`, suffix)}
+              {suffix && renderChars(`${id}-suffix`, suffix, 1)}
             </AnimatePresence>
           </motion.span>
         </AnimatePresence>
