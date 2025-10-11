@@ -56,6 +56,11 @@
   color: #ffffff;
   border-radius: 1rem;
   background: var(--body-light);
+
+  @media (max-width: 600px) {
+    font-size: 2.25rem;
+    padding: 4rem 1rem 2rem;
+  }
 }
 
 .install {
@@ -84,6 +89,6 @@
 }
 
 .example {
-  max-width: 28rem;
+  max-width: 34rem;
   width: 100%;
 }
