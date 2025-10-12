@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 
 import { useEffect, useState } from "react";
 
-import ContentTransition from "content-transition";
+import TextMorph from "text-morph";
 
 import { Footer } from "../footer";
 import { Button } from "../button";
@@ -39,9 +39,9 @@ const texts = [
   //"Multiple lines of animated text!",
 ];
 const pkgCmds = {
-  npm: "npm i content-transition",
-  pnpm: "pnpm i content-transition",
-  yarn: "yarn add content-transition",
+  npm: "npm i text-morph",
+  pnpm: "pnpm i text-morph",
+  yarn: "yarn add text-morph",
 };
 
 export default function Home() {
@@ -61,7 +61,7 @@ export default function Home() {
         <div className={styles.header}>
           <h1>
             <span>
-              <strong>Content Transition</strong> for
+              <strong>Text Morph</strong> for
             </span>{" "}
             <ReactLogo /> <strong>React</strong>
           </h1>
@@ -69,9 +69,7 @@ export default function Home() {
         </div>
 
         <div className={styles.demo}>
-          <ContentTransition>
-            {texts[textIndex % texts.length]}
-          </ContentTransition>
+          <TextMorph>{texts[textIndex % texts.length]}</TextMorph>
 
           <Button onClick={() => setTextIndex((i) => i + 1)}>
             <svg
@@ -104,31 +102,29 @@ export default function Home() {
           </div>
           <p>
             <code>
-              <ContentTransition>
+              <TextMorph>
                 {
                   pkgCmds[
                     Object.keys(pkgCmds)[cmdIndex] as keyof typeof pkgCmds
                   ]
                 }
-              </ContentTransition>
+              </TextMorph>
             </code>
           </p>
         </div>
 
         <div className={styles.example}>
           <CodeBlock
-            code={`import ContentTransition from 'content-transition'
+            code={`import TextMorph from 'text-morph'
         
-<ContentTransition>${texts[textIndex % texts.length]}</ContentTransition>`}
+<TextMorph>${texts[textIndex % texts.length]}</TextMorph>`}
           >
-            {`import ContentTransition from 'content-transition'
+            {`import TextMorph from 'text-morph'
 
-<ContentTransition>`}
+<TextMorph>`}
 
-            <ContentTransition>
-              {texts[textIndex % texts.length]}
-            </ContentTransition>
-            {`</ContentTransition>`}
+            <TextMorph>{texts[textIndex % texts.length]}</TextMorph>
+            {`</TextMorph>`}
           </CodeBlock>
         </div>
         <Footer />

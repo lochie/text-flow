@@ -1,4 +1,4 @@
-# content-transition
+# text-morph
 
 ## 0.0.1
 

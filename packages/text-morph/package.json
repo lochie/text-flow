@@ -1,13 +1,13 @@
 {
-  "name": "content-transition",
+  "name": "text-morph",
   "version": "0.0.1",
   "description": "An animated text component for React.",
   "author": "Lochie Axon",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lochie/content-transition.git",
-    "directory": "packages/content-transition"
+    "url": "git+https://github.com/lochie/text-morph.git",
+    "directory": "packages/text-morph"
   },
   "types": "dist/index.d.ts",
   "exports": {
@@ -37,7 +37,7 @@
     "animation"
   ],
   "bugs": {
-    "url": "https://github.com/lochie/content-transition/issues"
+    "url": "https://github.com/lochie/text-morph/issues"
   },
   "files": [
     "dist/*"

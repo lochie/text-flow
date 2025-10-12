@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 
 import React from "react";
-import ContentTransition from "content-transition";
+import TextMorph from "text-morph";
 import { Button } from "../button";
 import { Box } from "../box";
 
@@ -40,7 +40,7 @@ export const Testbench = () => {
           textAlign: latest.textAlignment,
         }}
       >
-        <ContentTransition>{latest.text}</ContentTransition>
+        <TextMorph>{latest.text}</TextMorph>
       </div>
 
       <form>
@@ -106,9 +106,7 @@ export const Testbench = () => {
             disabled={isChanged}
             onClick={() => setLatest(prev)}
           >
-            <ContentTransition>
-              {!isChanged ? "Revert" : "Reverted"}
-            </ContentTransition>
+            <TextMorph>{!isChanged ? "Revert" : "Reverted"}</TextMorph>
           </Button>
           <Button
             type="submit"
@@ -119,9 +117,7 @@ export const Testbench = () => {
               setLatest(options);
             }}
           >
-            <ContentTransition>
-              {isChanged ? "Apply" : "Applied"}
-            </ContentTransition>
+            <TextMorph>{isChanged ? "Apply" : "Applied"}</TextMorph>
           </Button>
         </Box>
       </form>

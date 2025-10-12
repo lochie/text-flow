@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import styles from "./styles.module.scss";
-import ContentTransition from "content-transition";
+import TextMorph from "text-morph";
 
 export const CodeBlock = ({
   code,
@@ -26,7 +26,7 @@ export const CodeBlock = ({
           }
         }}
       >
-        <ContentTransition>{isCopied ? `Copied` : `Copy`}</ContentTransition>
+        <TextMorph>{isCopied ? `Copied` : `Copy`}</TextMorph>
       </button>
       <pre>{children ?? code}</pre>
     </div>

@@ -1,25 +1,25 @@
-# content-transition
+# text-morph
 
 An animated text component for React.
 
 ## Installation
 
 ```shell
-pnpm i content-transition
+pnpm i text-morph
 ```
 
 ## Usage
 
 ```tsx
-import ContentTransition from "content-transition";
+import TextMorph from "text-morph";
 
-<ContentTransition>Hello world</ContentTransition>;
+<TextMorph>Hello world</TextMorph>;
 ```
 
 ## Options
 
 ```tsx
-<ContentTransition
+<TextMorph
   children="Hello world"
   duration={1} // duration of the transition in seconds
 />

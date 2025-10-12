@@ -1,6 +1,6 @@
 import { Transition } from "motion";
 
-export interface ContentTransitionProps {
+export interface TextMorphProps {
   debug?: boolean;
   children: string; // TODO: support ReactNode
   //fontSize?: number; // potentially supported in future

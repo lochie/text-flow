@@ -1,4 +1,4 @@
-# ContentTransition
+# TextMorph
 
 ## Install dependencies
 
