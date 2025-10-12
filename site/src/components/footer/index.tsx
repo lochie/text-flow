@@ -1,5 +1,7 @@
 import styles from "./styles.module.scss";
 
+import { version } from "text-morph";
+
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
@@ -18,6 +20,16 @@ export const Footer = () => {
           />
           Lochie
         </a>
+      </div>
+      <div className={styles.details}>
+        <a
+          href="https://github.com/lochie/text-morph"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>{" "}
+        • <span>v{version}</span>
       </div>
     </footer>
   );

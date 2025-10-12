@@ -100,17 +100,11 @@ export default function Home() {
               </button>
             ))}
           </div>
-          <p>
-            <code>
-              <TextMorph>
-                {
-                  pkgCmds[
-                    Object.keys(pkgCmds)[cmdIndex] as keyof typeof pkgCmds
-                  ]
-                }
-              </TextMorph>
-            </code>
-          </p>
+          <code>
+            <TextMorph>
+              {pkgCmds[Object.keys(pkgCmds)[cmdIndex] as keyof typeof pkgCmds]}
+            </TextMorph>
+          </code>
         </div>
 
         <div className={styles.example}>

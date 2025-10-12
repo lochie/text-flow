@@ -38,4 +38,21 @@
       }
     }
   }
+
+  .details {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.12);
+    a,
+    span {
+      color: var(--color-muted);
+    }
+    a {
+      transition: color 100ms ease;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 }
