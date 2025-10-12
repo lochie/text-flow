@@ -1,25 +1,25 @@
-# text-morph
+# torph
 
 An animated text component for React.
 
 ## Installation
 
 ```shell
-pnpm i text-morph
+pnpm i torph
 ```
 
 ## Usage
 
 ```tsx
-import TextMorph from "text-morph";
+import Torph from "torph";
 
-<TextMorph>Hello world</TextMorph>;
+<Torph>Hello world</Torph>;
 ```
 
 ## Options
 
 ```tsx
-<TextMorph
+<Torph
   children="Hello world"
   duration={1} // duration of the transition in seconds
 />

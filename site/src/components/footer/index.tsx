@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 
-import { version } from "text-morph";
+import { version } from "torph";
 
 export const Footer = () => {
   return (
@@ -23,7 +23,7 @@ export const Footer = () => {
       </div>
       <div className={styles.details}>
         <a
-          href="https://github.com/lochie/text-morph"
+          href="https://github.com/lochie/torph"
           target="_blank"
           rel="noopener noreferrer"
         >

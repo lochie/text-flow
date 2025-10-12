@@ -1,13 +1,13 @@
 {
-  "name": "text-morph",
+  "name": "torph",
   "version": "0.0.1",
   "description": "An animated text component for React.",
   "author": "Lochie Axon",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lochie/text-morph.git",
-    "directory": "packages/text-morph"
+    "url": "git+https://github.com/lochie/torph.git",
+    "directory": "packages/torph"
   },
   "types": "dist/index.d.ts",
   "exports": {
@@ -37,7 +37,7 @@
     "animation"
   ],
   "bugs": {
-    "url": "https://github.com/lochie/text-morph/issues"
+    "url": "https://github.com/lochie/torph/issues"
   },
   "files": [
     "dist/*"

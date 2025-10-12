@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 
 import { useEffect, useState } from "react";
 
-import TextMorph from "text-morph";
+import Torph from "torph";
 
 import { Footer } from "../footer";
 import { Button } from "../button";
@@ -39,9 +39,9 @@ const texts = [
   //"Multiple lines of animated text!",
 ];
 const pkgCmds = {
-  npm: "npm i text-morph",
-  pnpm: "pnpm i text-morph",
-  yarn: "yarn add text-morph",
+  npm: "npm i torph",
+  pnpm: "pnpm i torph",
+  yarn: "yarn add torph",
 };
 
 export default function Home() {
@@ -61,7 +61,7 @@ export default function Home() {
         <div className={styles.header}>
           <h1>
             <span>
-              <strong>Text Morph</strong> for
+              <strong>Torph</strong> for
             </span>{" "}
             <ReactLogo /> <strong>React</strong>
           </h1>
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
 
         <div className={styles.demo}>
-          <TextMorph>{texts[textIndex % texts.length]}</TextMorph>
+          <Torph>{texts[textIndex % texts.length]}</Torph>
 
           <Button onClick={() => setTextIndex((i) => i + 1)}>
             <svg
@@ -101,24 +101,24 @@ export default function Home() {
             ))}
           </div>
           <code>
-            <TextMorph>
+            <Torph>
               {pkgCmds[Object.keys(pkgCmds)[cmdIndex] as keyof typeof pkgCmds]}
-            </TextMorph>
+            </Torph>
           </code>
         </div>
 
         <div className={styles.example}>
           <CodeBlock
-            code={`import TextMorph from 'text-morph'
+            code={`import Torph from 'torph'
         
-<TextMorph>${texts[textIndex % texts.length]}</TextMorph>`}
+<Torph>${texts[textIndex % texts.length]}</Torph>`}
           >
-            {`import TextMorph from 'text-morph'
+            {`import Torph from 'torph'
 
-<TextMorph>`}
+<Torph>`}
 
-            <TextMorph>{texts[textIndex % texts.length]}</TextMorph>
-            {`</TextMorph>`}
+            <Torph>{texts[textIndex % texts.length]}</Torph>
+            {`</Torph>`}
           </CodeBlock>
         </div>
         <Footer />

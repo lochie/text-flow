@@ -20,7 +20,7 @@ importers:
         specifier: ^15.0.2
         version: 15.0.2
 
-  packages/text-morph:
+  packages/torph:
     dependencies:
       motion:
         specifier: ^12.23.16
@@ -89,9 +89,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
-      text-morph:
+      torph:
         specifier: workspace:*
-        version: link:../packages/text-morph
+        version: link:../packages/torph
     devDependencies:
       "@types/react":
         specifier: ^18.2.15

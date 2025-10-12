@@ -1,4 +1,4 @@
-# TextMorph
+# Torph
 
 ## Install dependencies
 
