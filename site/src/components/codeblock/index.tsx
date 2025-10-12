@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import styles from "./styles.module.scss";
-import Torph from "torph";
+import { TextMorph } from "torph";
 
 export const CodeBlock = ({
   code,
@@ -26,7 +26,7 @@ export const CodeBlock = ({
           }
         }}
       >
-        <Torph>{isCopied ? `Copied` : `Copy`}</Torph>
+        <TextMorph>{isCopied ? `Copied` : `Copy`}</TextMorph>
       </button>
       <pre>{children ?? code}</pre>
     </div>

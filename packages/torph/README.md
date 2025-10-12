@@ -11,15 +11,15 @@ pnpm i torph
 ## Usage
 
 ```tsx
-import Torph from "torph";
+import { TextMorph } from "torph";
 
-<Torph>Hello world</Torph>;
+<TextMorph>Hello world</TextMorph>;
 ```
 
 ## Options
 
 ```tsx
-<Torph
+<TextMorph
   children="Hello world"
   duration={1} // duration of the transition in seconds
 />

@@ -1,5 +1,4 @@
 export { version } from "./../package.json";
 
-import Torph from "./components/torph";
-export { TorphProps } from "./components/torph/types";
-export default Torph;
+export { TextMorph } from "./components/text-morph";
+export { TextMorphProps } from "./components/text-morph/types";

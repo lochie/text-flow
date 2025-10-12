@@ -5,13 +5,13 @@ import React from "react";
 import { motion, AnimatePresence, Transition } from "motion/react";
 import styles from "./styles";
 
-import { TorphProps } from "./types";
+import { TextMorphProps } from "./types";
 import defaultConfig from "../../config";
 import { findLCS } from "../../utils";
 
 import useDebounce from "../../hooks/useDebounce";
 
-const Torph = ({
+export const TextMorph = ({
   debug,
   children,
   //fontSize,
@@ -20,7 +20,7 @@ const Torph = ({
   ease = defaultConfig.ease,
   // respectMotionPreference = defaultConfig.respectMotionPreference,
   onAnimationComplete,
-}: TorphProps) => {
+}: TextMorphProps) => {
   const id = React.useId();
   const previousRef = React.useRef(children);
   const debounceChildren = useDebounce(children, 100);
@@ -144,5 +144,3 @@ const Torph = ({
     </motion.span>
   );
 };
-
-export default Torph;

@@ -1,11 +1,11 @@
-import { TorphProps } from "./components/torph/types";
+import { TextMorphProps } from "./components/text-morph/types";
 
-type DefaultTorphProps = Omit<TorphProps, "duration" | "children"> & {
-  duration: NonNullable<TorphProps["duration"]>;
-  children?: TorphProps["children"];
+type DefaultTextMorphProps = Omit<TextMorphProps, "duration" | "children"> & {
+  duration: NonNullable<TextMorphProps["duration"]>;
+  children?: TextMorphProps["children"];
 };
 
-const defaultConfig: DefaultTorphProps = {
+const defaultConfig: DefaultTextMorphProps = {
   duration: 0.4,
   ease: [0.19, 1, 0.22, 1],
   respectMotionPreference: true,

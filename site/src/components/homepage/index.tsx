@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 
 import { useEffect, useState } from "react";
 
-import Torph from "torph";
+import { TextMorph } from "torph";
 
 import { Footer } from "../footer";
 import { Button } from "../button";
@@ -61,7 +61,7 @@ export default function Home() {
         <div className={styles.header}>
           <h1>
             <span>
-              <strong>Torph</strong> for
+              <strong>Text Morph</strong> for
             </span>{" "}
             <ReactLogo /> <strong>React</strong>
           </h1>
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
 
         <div className={styles.demo}>
-          <Torph>{texts[textIndex % texts.length]}</Torph>
+          <TextMorph>{texts[textIndex % texts.length]}</TextMorph>
 
           <Button onClick={() => setTextIndex((i) => i + 1)}>
             <svg
@@ -101,24 +101,24 @@ export default function Home() {
             ))}
           </div>
           <code>
-            <Torph>
+            <TextMorph>
               {pkgCmds[Object.keys(pkgCmds)[cmdIndex] as keyof typeof pkgCmds]}
-            </Torph>
+            </TextMorph>
           </code>
         </div>
 
         <div className={styles.example}>
           <CodeBlock
-            code={`import Torph from 'torph'
+            code={`import { TextMorph } from 'torph'
         
-<Torph>${texts[textIndex % texts.length]}</Torph>`}
+<TextMorph>${texts[textIndex % texts.length]}</TextMorph>`}
           >
-            {`import Torph from 'torph'
+            {`import { TextMorph } from 'torph'
 
-<Torph>`}
+<TextMorph>`}
 
-            <Torph>{texts[textIndex % texts.length]}</Torph>
-            {`</Torph>`}
+            <TextMorph>{texts[textIndex % texts.length]}</TextMorph>
+            {`</TextMorph>`}
           </CodeBlock>
         </div>
         <Footer />

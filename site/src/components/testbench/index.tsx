@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 
 import React from "react";
-import Torph from "torph";
+import { TextMorph } from "torph";
 import { Button } from "../button";
 import { Box } from "../box";
 
@@ -40,7 +40,7 @@ export const Testbench = () => {
           textAlign: latest.textAlignment,
         }}
       >
-        <Torph>{latest.text}</Torph>
+        <TextMorph>{latest.text}</TextMorph>
       </div>
 
       <form>
@@ -106,7 +106,7 @@ export const Testbench = () => {
             disabled={isChanged}
             onClick={() => setLatest(prev)}
           >
-            <Torph>{!isChanged ? "Revert" : "Reverted"}</Torph>
+            <TextMorph>{!isChanged ? "Revert" : "Reverted"}</TextMorph>
           </Button>
           <Button
             type="submit"
@@ -117,7 +117,7 @@ export const Testbench = () => {
               setLatest(options);
             }}
           >
-            <Torph>{isChanged ? "Apply" : "Applied"}</Torph>
+            <TextMorph>{isChanged ? "Apply" : "Applied"}</TextMorph>
           </Button>
         </Box>
       </form>
